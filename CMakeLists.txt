@@ -51,7 +51,7 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 ################################################################################
 
 # FastEnvelope options
-option(FAST_ENVELOPE_WITH_UNIT_TESTS   			"unit test project" 			ON)
+option(FAST_ENVELOPE_WITH_UNIT_TESTS   			"unit test project" 			OFF)
 option(FAST_ENVELOPE_ENABLE_TBB        			"Enable TBB"                    ON)
 # option(FAST_ENVELOPE_USE_FLOAT          		"Use floats instead of double"  OFF)
 
