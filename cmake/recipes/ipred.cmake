@@ -8,7 +8,7 @@ include(FetchContent)
 FetchContent_Declare(
     ipred
     GIT_REPOSITORY https://github.com/nTopology/Indirect_Predicates.git
-    GIT_TAG ed0012f5f27376f1cae36bf5c24c69f290ff748b
+    GIT_TAG 3d40bff57af2bb3499c0f3c0bae6f317fd566590
     GIT_SHALLOW TRUE
 )
 FetchContent_MakeAvailable(ipred)

@@ -105,7 +105,7 @@ include(FastEnvelopeDependencies)
 ################################################################################
 
 # add_library() can only be called without any source since CMake 3.11 ...
-add_library(${PROJECT_NAME} SHARED src/common_algorithms.cpp)
+add_library(${PROJECT_NAME} src/common_algorithms.cpp)
 target_compile_features(${PROJECT_NAME} PRIVATE ${CXX11_FEATURES})
 
 # Public include directory for FastEnvelope
@@ -115,12 +115,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE warnings::all)
 
 # Use C++14
 target_compile_features(${PROJECT_NAME} PUBLIC ${CXX14_FEATURES})
-
-# Export interface symbols and hide internal implementation
-include(GenerateExportHeader)
-generate_export_header(${PROJECT_NAME})
-target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_BINARY_DIR})
-set_target_properties(${PROJECT_NAME} PROPERTIES CXX_VISIBILITY_PRESET hidden)
 
 # libigl
 if(NOT TARGET igl::core)
