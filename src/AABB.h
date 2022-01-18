@@ -12,7 +12,7 @@ namespace fastEnvelope {
 		
 		
 		std::vector<std::array<Vector3, 2>> boxlist;
-		size_t n_corners = -1;
+		int n_corners = -1;
 
 		void init_envelope_boxes_recursive(
 			const std::vector<std::array<Vector3, 2>> &cornerlist,
